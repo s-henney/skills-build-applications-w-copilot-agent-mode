@@ -1,7 +1,7 @@
 export const getApiBaseUrl = (resource) => {
   const codespaceName = import.meta.env.VITE_CODESPACE_NAME;
   const host = codespaceName
-    ? `https://${codespaceName}-8000.app.github.dev`
+    ? `https://${codespaceName}`
     : 'http://localhost:8000';
 
   return `${host}${resource}`;
