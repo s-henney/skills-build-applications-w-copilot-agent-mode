@@ -4,7 +4,7 @@ export const getApiBaseUrl = (resource) => {
     ? `https://${codespaceName}-8000.app.github.dev`
     : 'http://localhost:8000';
 
-  return `${host}/${resource}`;
+  return `${host}${resource}`;
 };
 
 export const normalizeCollection = (payload) => {
