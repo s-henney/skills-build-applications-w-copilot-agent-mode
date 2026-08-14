@@ -7,16 +7,12 @@ import Team from './models/Team.js';
 import Activity from './models/Activity.js';
 import Leaderboard from './models/Leaderboard.js';
 import Workout from './models/Workout.js';
+import { apiBaseUrl, PORT } from './server.js';
 
 dotenv.config();
 
 const app: Express = express();
-const PORT = Number(process.env.PORT ?? 8000);
 const MONGODB_URI = process.env.MONGODB_URI ?? 'mongodb://localhost:27017/octofit_db';
-const codespaceName = process.env.CODESPACE_NAME;
-const apiBaseUrl = codespaceName
-  ? `https://${codespaceName}-8000.app.github.dev`
-  : `http://localhost:${PORT}`;
 
 // Middleware
 app.use(cors());
